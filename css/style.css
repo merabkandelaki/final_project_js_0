@@ -1,0 +1,310 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Header */
+
+.header {
+    padding: 18px 55px;
+    background-color: #030336;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-name img {
+    width: 75px;
+    height: 43px;
+}
+
+.name {
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.name span {
+    color: coral;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.icon {
+    position: absolute;
+    right: 125px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btn {
+    width: 100px;
+    padding: 10px;
+    background-color: coral;
+    color: #010116;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9b9797;
+}
+
+/* Slider */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 930px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Movies */
+.all-movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000007;
+    padding: 30px 55px;
+    gap: 25px;
+}
+
+.all-movies-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+}
+
+.movies-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.movie-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.movie-card:hover img {
+    transform: scale(1.4);
+}
+
+.movie-card:hover .movie-info {
+    transform: translateY(0);
+}
+
+.movie-card img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: 0.8s;
+    transform-origin: center center;
+}
+
+.movie-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+    gap: 5px;
+    color: white;
+    background-color: rgba(2, 0, 36, 0.8);
+    transition: .5s;
+    transform: translateY(100%);
+}
+
+.movie-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.movie-overview {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.genre {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.genres-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.date-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.release-date, .rating {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating {
+    width: 35px;
+    height: 35px;
+    padding-top: 8px;
+    background-color: rgb(67, 17, 161);
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Previous and next Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.prev {
+    width: 100px;
+    padding: 10px;
+    background-color: #fcfafa;
+    color: #010116;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    background-color: #9b9797;
+}
+
+.next {
+    width: 100px;
+    padding: 10px;
+    background-color: coral;
+    color: #010116;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.next.disabled, .prev.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Footer */
+.footer {
+    padding: 18px 55px;
+    background-color: #030336;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.footer-up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right-title {
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-down-left-desc, .footer-down-right-desc {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
